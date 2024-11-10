@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ - Health and Hygiene</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #E8B7D4;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            animation: fadeIn 2s ease;
+        }
+        header {
+            background-color: #000;
+            padding: 20px;
+            text-align: center;
+            animation: slideDown 1s ease;
+        }
+        header h1 {
+            color: #fff;
+            margin: 0;
+            font-size: 2.5rem;
+            animation: typing 3s steps(20) forwards;
+            overflow: hidden;
+            white-space: nowrap;
+            border-right: 4px solid #fff;
+        }
+        nav {
+            text-align: center;
+            background-color: #000;
+            padding: 10px 0;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+        nav a:hover {
+            color: #E8B7D4;
+        }
+        section {
+            padding: 40px 20px;
+            animation: fadeIn 2s ease;
+        }
+        h2 {
+            color: #BFB8DA;
+            animation: zoomIn 1.5s ease;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+            animation: fadeInUp 2s ease;
+        }
+        li {
+            font-size: 1.1rem;
+            margin: 20px 0;
+            cursor: pointer;
+            position: relative;
+            border: 1px solid #333;
+            border-radius: 8px;
+            padding: 15px;
+            background-color: #f8f8f8;
+            transition: background-color 0.3s;
+        }
+        li:hover {
+            background-color: #F3D0E0;
+        }
+        .question {
+            font-weight: bold;
+            color: #5A0A2A;
+            animation: popIn 0.8s ease;
+        }
+        .answer {
+            display: none;
+            background-color: #333;
+            color: #fff;
+            font-size: 1rem;
+            margin-top: 10px;
+            padding: 15px;
+            border-radius: 5px;
+            animation: slideDownAnswer 0.5s ease forwards;
+            border-top: 2px solid #5A0A2A;
+        }
+        /* Keyframes for animations */
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+        @keyframes slideDown {
+            0% { transform: translateY(-100%); }
+            100% { transform: translateY(0); }
+        }
+        @keyframes zoomIn {
+            0% { transform: scale(0.5); }
+            100% { transform: scale(1); }
+        }
+        @keyframes fadeInUp {
+            0% { transform: translateY(20px); opacity: 0; }
+            100% { transform: translateY(0); opacity: 1; }
+        }
+        @keyframes typing {
+            from { width: 0; }
+            to { width: 100%; }
+        }
+        @keyframes slideDownAnswer {
+            0% { height: 0; opacity: 0; }
+            100% { height: auto; opacity: 1; }
+        }
+        @keyframes popIn {
+            0% { transform: scale(0.8); opacity: 0; }
+            100% { transform: scale(1); opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Frequently Asked Questions</h1>
+    </header>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="faq.html">FAQ</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+    <section>
+        <h2>FAQ</h2>
+        <ul>
+            <li onclick="toggleAnswer(this)">
+                <div class="question">How often should I wash my hands?</div>
+                <div class="answer">You should wash your hands regularly, especially before meals, after using the restroom, and after touching potentially contaminated surfaces.</div>
+            </li>
+            <li onclick="toggleAnswer(this)">
+                <div class="question">What is the importance of sanitation?</div>
+                <div class="answer">Sanitation is essential to prevent the spread of disease by ensuring clean water and reducing waste buildup.</div>
+            </li>
+            <li onclick="toggleAnswer(this)">
+                <div class="question">How can I promote hygiene in my community?</div>
+                <div class="answer">You can promote hygiene by educating others on proper practices and ensuring public spaces have sanitation facilities.</div>
+            </li>
+            <li onclick="toggleAnswer(this)">
+                <div class="question">What should I do if I feel sick?</div>
+                <div class="answer">If you feel sick, rest and monitor symptoms, stay hydrated, and seek medical attention if necessary.</div>
+            </li>
+            <li onclick="toggleAnswer(this)">
+                <div class="question">How does personal hygiene impact mental health?</div>
+                <div class="answer">Good personal hygiene can boost self-esteem, reduce stress, and positively impact mental well-being.</div>
+            </li>
+        </ul>
+    </section>
+    <script>
+        function toggleAnswer(item) {
+            const answer = item.querySelector('.answer');
+            answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
+        }
+    </script>
+</body>
+</html>
